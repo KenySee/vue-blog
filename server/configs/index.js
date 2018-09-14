@@ -5,14 +5,14 @@ let config = {
         baseApi: '/api',
     },
     mongodb: {
-        url: process.env.MONGO_URL || 'mongodb://localhost:27017/vue-blog',
+        url: process.env.MONGO_URL || 'mongodb://120.77.211.175:27017/vue-blog',
     },
     jwt: {
         secret: 'me', // 默认
     },
     mongodbSecret: { // mongodb用户和密码
-        user: '',
-        pass: '',
+        user: 'vue-blog',
+        pass: 'vue-blog',
     },
     admin: { // 后台初始化的用户名密码
         user: 'admin',

@@ -7,7 +7,7 @@ export async function initUser() {
     let user = await User.find().exec().catch(err => {
         console.log(err);
     });
-    if (user.length === 0) {
+    if (!user || user.length === 0) {
     // 目前还没做修改密码的功能，因为是单用户系统觉得需求不大
     // 如果想更换用户名／密码，先将数据库原有user删除(drop)
     // 配置中加入用户名密码，重启服务即可
